@@ -5,7 +5,7 @@ import NotesList from './NoteList/NotesListContainer';
 
 const App = () => (
   <>
-    <h2>Welcoome</h2>
+    <h2>Welcome</h2>
     <FilterNotes />
     <NoteEditor />
     <NotesList />
