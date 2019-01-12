@@ -12,7 +12,7 @@ export default class NoteEditor extends Component {
   handleSubmit = e => {
     e.preventDefault();
 
-    this.props.noteAdd(this.state.text);
+    this.props.fetchAddNote({ text: this.state.text, completed: false });
     this.setState({ text: '' });
   };
 

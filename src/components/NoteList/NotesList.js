@@ -1,7 +1,7 @@
 import React from 'react';
 import Note from '../Note/Note';
 
-const NoteList = ({ notes = [], noteDelete, toggleNote }) => (
+const NoteList = ({ notes = [], fetchDeleteNote, fetchToggleNote }) => (
   <div
     style={{
       display: 'flex',
@@ -17,8 +17,8 @@ const NoteList = ({ notes = [], noteDelete, toggleNote }) => (
       <Note
         key={note.id}
         {...note}
-        onDelete={() => noteDelete(note.id)}
-        onToggle={() => toggleNote(note.id)}
+        onDelete={() => fetchDeleteNote(note.id)}
+        onToggle={() => fetchToggleNote(note.id)}
       />
     ))}
   </div>
