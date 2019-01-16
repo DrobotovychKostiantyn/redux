@@ -1,6 +1,6 @@
 import React from 'react';
 
-const NoteFilter = ({ value = '', onChange = () => null }) => (
+const NoteFilter = ({ value = '', onChange }) => (
   <input
     value={value}
     onChange={e => onChange(e.target.value)}

@@ -33,15 +33,14 @@ const fetchDeleteNote = id => dispatch => {
     .catch(error => dispatch(actions.fetchError(error)));
 };
 
-const fetchToggleNote = id => dispatch => {
+const fetchToggleNote = id => async dispatch => {
   dispatch(actions.fetchRequest());
-  axios
-    .put(`${URL_NOTES}/${id}`)
-    .then(response => {
-      console.log(response);
-      //   dispatch(actions.toggleSuccess(id));
-    })
-    .catch(error => dispatch(actions.fetchError(error)));
-};
 
+  try {
+    await axios.patch(`http://localhost:3001/notes/${id}`);
+    dispatch(actions.toggleSuccess(id));
+  } catch (error) {
+    dispatch(actions.fetchError(error));
+  }
+};
 export { fetchNotes, fetchAddNote, fetchDeleteNote, fetchToggleNote };

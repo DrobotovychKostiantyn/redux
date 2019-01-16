@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import React, { Component } from 'react';
 import NoteList from './NotesList';
 import { getFilteredNotes } from '../../modules/notes/notesSelectors';
+
 import {
   fetchNotes,
   fetchDeleteNote,
@@ -22,7 +23,11 @@ const mapStateToProps = state => ({
   notes: getFilteredNotes(state),
 });
 
-const mapDispatchToProps = { fetchDeleteNote, fetchToggleNote, fetchNotes };
+const mapDispatchToProps = {
+  fetchDeleteNote,
+  fetchToggleNote,
+  fetchNotes,
+};
 
 export default connect(
   mapStateToProps,
