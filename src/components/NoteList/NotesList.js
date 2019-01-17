@@ -19,7 +19,7 @@ const NoteList = ({ notes = [], fetchDeleteNote, fetchToggleNote }) =>
           key={note.id}
           {...note}
           onDelete={() => fetchDeleteNote(note.id)}
-          onToggle={() => fetchToggleNote(note.id)}
+          onToggle={() => fetchToggleNote(note.id, note)}
         />
       ))}
     </div>
