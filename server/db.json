@@ -7,12 +7,12 @@
     },
     {
       "text": "fffffffffff",
-      "completed": false,
+      "completed": true,
       "id": 2
     },
     {
       "text": "ddddddddddd",
-      "completed": false,
+      "completed": true,
       "id": 3
     },
     {
