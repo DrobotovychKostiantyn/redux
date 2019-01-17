@@ -2,12 +2,12 @@
   "notes": [
     {
       "text": "..",
-      "completed": true,
+      "completed": false,
       "id": 1
     },
     {
       "text": "fffffffffff",
-      "completed": true,
+      "completed": false,
       "id": 2
     },
     {
@@ -17,7 +17,7 @@
     },
     {
       "text": "sssssssssssssssss",
-      "completed": false,
+      "completed": true,
       "id": 4
     }
   ]

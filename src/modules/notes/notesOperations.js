@@ -35,15 +35,9 @@ const fetchDeleteNote = id => dispatch => {
 
 const fetchToggleNote = id => async dispatch => {
   dispatch(actions.fetchRequest());
-  let get;
 
   try {
-    get = await axios.get(`http://localhost:3001/notes/${id}`);
-  } catch (error) {
-    dispatch(actions.fetchError(error));
-  }
-
-  try {
+    const get = await axios.get(`http://localhost:3001/notes/${id}`);
     await axios.patch(`http://localhost:3001/notes/${id}`, {
       ...get.data,
       completed: !get.data.completed,
