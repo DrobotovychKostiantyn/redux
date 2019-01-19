@@ -6,6 +6,7 @@
     "axios": "^0.18.0",
     "husky": "^1.2.0",
     "lint-staged": "^8.1.0",
+    "normalizr": "^3.3.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-redux": "^6.0.0",
@@ -14,6 +15,7 @@
     "react-svg-sprite": "^1.0.8",
     "redux": "^4.0.1",
     "redux-devtools-extension": "^2.13.7",
+    "reselect": "^4.0.0",
     "shortid": "^2.2.14"
   },
   "scripts": {
