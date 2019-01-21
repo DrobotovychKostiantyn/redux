@@ -12,6 +12,7 @@
     "react-scripts": "2.1.1",
     "react-svg": "^7.2.2",
     "react-svg-sprite": "^1.0.8",
+    "react-transition-group": "^2.5.3",
     "redux": "^4.0.1",
     "redux-devtools-extension": "^2.13.7",
     "shortid": "^2.2.14"
