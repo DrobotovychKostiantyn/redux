@@ -1,9 +1,15 @@
 import { createStore } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import reducers from '../modules/rootModule';
+import rootReducer from '../modules/reducers/index';
+import entities from '../products.json';
 
 const enhancer = composeWithDevTools();
 
-const store = createStore(reducers, enhancer);
+const preloadedState = {
+  products: Object.keys(entities.products),
+  entities: { ...entities },
+};
+
+const store = createStore(rootReducer, preloadedState, enhancer);
 
 export default store;
