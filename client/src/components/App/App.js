@@ -1,14 +1,11 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { Switch, Route } from 'react-router-dom';
-import { SignIn, SignUp } from '../../pages';
-import Header from '../Header/Header';
-import * as operations from '../../redux/operations';
+import React, { Component } from "react";
+// import { connect } from "react-redux";
+import { Switch, Route } from "react-router-dom";
+import { SignIn, SignUp } from "../../pages";
+import Header from "../Header/Header";
 
 class App extends Component {
-  componentDidMount() {
-    this.props.refreshCurrentUser();
-  }
+  componentDidMount() {}
 
   render() {
     return (
@@ -24,7 +21,4 @@ class App extends Component {
   }
 }
 
-export default connect(
-  null,
-  { refreshCurrentUser: operations.refreshCurrentUser }
-)(App);
+export default App;

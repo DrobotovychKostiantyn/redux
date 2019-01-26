@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import * as operations from '../../redux/operations';
-import Form from '../common/Form/Form';
-import Input from '../common/Input/Input';
-import Label from '../common/Label/Label';
-import Button from '../common/Button/Button';
+import React, { Component } from "react";
+// import { connect } from 'react-redux';
+// import * as operations from '../../redux/operations';
+import Form from "../common/Form/Form";
+import Input from "../common/Input/Input";
+import Label from "../common/Label/Label";
+import Button from "../common/Button/Button";
 
-const INITIAL_STATE = { email: '', password: '' };
+const INITIAL_STATE = { email: "", password: "" };
 
 class SignInForm extends Component {
   state = { ...INITIAL_STATE };
@@ -55,11 +55,4 @@ class SignInForm extends Component {
   }
 }
 
-const mapDispatch = {
-  onSubmit: operations.signIn
-};
-
-export default connect(
-  null,
-  mapDispatch
-)(SignInForm);
+export default SignInForm;
