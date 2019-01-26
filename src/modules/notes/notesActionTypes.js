@@ -1,6 +1,0 @@
-const ADD = 'note/ADD';
-const DELETE = 'note/DELETE';
-const TOGGLE_COMPLETED = 'note/TOGGLE_COMPLETED';
-const CHANGE_FILTER = 'note/CHANGE_FILTER';
-
-export { ADD, DELETE, TOGGLE_COMPLETED, CHANGE_FILTER };
