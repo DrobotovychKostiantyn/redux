@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-// import { connect } from "react-redux";
-// import * as operations from "../../redux/operations";
+import { connect } from "react-redux";
+
+import { signUp } from "../../redux/operations";
 import Form from "../common/Form/Form";
 import Input from "../common/Input/Input";
 import Label from "../common/Label/Label";
@@ -64,4 +65,11 @@ class SignUpForm extends Component {
   }
 }
 
-export default SignUpForm;
+const mapState = state => ({});
+
+const mapDispatch = { onSubmit: signUp };
+
+export default connect(
+  mapState,
+  mapDispatch
+)(SignUpForm);

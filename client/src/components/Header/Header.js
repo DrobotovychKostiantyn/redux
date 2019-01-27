@@ -1,11 +1,11 @@
 import React from "react";
-// import { connect } from 'react-redux';
+import { connect } from "react-redux";
 import UserProfile from "../UserProfile/UserProfile";
 import AuthNav from "../AuthNav/AuthNav";
 import classes from "./Header.module.css";
 
-// import * as selectors from '../../redux/selectors';
-// import * as operations from '../../redux/operations';
+import { getAuthenticated } from "../../redux/selectors";
+import { signOut } from "../../redux/operations";
 
 const Header = ({ isAuthenticated, user, onSignOut }) => (
   <header className={classes.header}>
@@ -17,4 +17,13 @@ const Header = ({ isAuthenticated, user, onSignOut }) => (
   </header>
 );
 
-export default Header;
+const mapState = state => ({
+  isAuthenticated: getAuthenticated(state)
+});
+
+const mapDispatch = { onSignOut: signOut };
+
+export default connect(
+  mapState,
+  mapDispatch
+)(Header);

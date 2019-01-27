@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-// import { connect } from 'react-redux';
-// import * as operations from '../../redux/operations';
+import { connect } from "react-redux";
+import { signIn } from "../../redux/operations";
 import Form from "../common/Form/Form";
 import Input from "../common/Input/Input";
 import Label from "../common/Label/Label";
@@ -55,4 +55,9 @@ class SignInForm extends Component {
   }
 }
 
-export default SignInForm;
+const mapDispatch = { onSubmit: signIn };
+
+export default connect(
+  null,
+  mapDispatch
+)(SignInForm);

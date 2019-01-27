@@ -1,6 +1,8 @@
-import React from 'react';
-import Button from '../common/Button/Button';
-import classes from './UserProfile.module.css';
+import React from "react";
+import Button from "../common/Button/Button";
+import classes from "./UserProfile.module.css";
+import { connect } from "react-redux";
+import { getUser } from "../../redux/selectors";
 
 const UserProfile = ({ user: { name }, onSignOut = () => null }) => (
   <div className={classes.container}>
@@ -17,4 +19,8 @@ const UserProfile = ({ user: { name }, onSignOut = () => null }) => (
   </div>
 );
 
-export default UserProfile;
+const mapState = state => ({
+  user: getUser(state)
+});
+
+export default connect(mapState)(UserProfile);
