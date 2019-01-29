@@ -29,7 +29,7 @@ export const signUp = credentials => dispatch => {
   axios
     .post("/auth/signup", credentials)
     .then(response => {
-      setAuthHeader(response.data.user.token);
+      setAuthHeader(response.data.token);
 
       dispatch(signUpSuccess(response.data));
     })
@@ -41,7 +41,7 @@ export const signIn = credentials => dispatch => {
   axios
     .post("/auth/signin", credentials)
     .then(response => {
-      setAuthHeader(response.data.user.token);
+      setAuthHeader(response.data.token);
 
       dispatch(signInSuccess(response.data));
     })
